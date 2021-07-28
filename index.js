@@ -22,10 +22,6 @@ io.on('connection', socket =>{
         socket.emit('valorJugador', {xOo:"O"})
     }
    cont++;
-console.log(cont)
-    socket.on('message', (data) => {
-        socket.emit('Server:message', {name: socket.id, message:data})
-    })
     socket.on('espacio', (data)=>{
         console.log(data.b)
         io.emit('asigEspacio', {esp:data.b})
